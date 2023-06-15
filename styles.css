@@ -1,0 +1,127 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-image: url("Streets.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#timer{
+    /* border: 2px solid red; */
+    width: 500px;
+    height: 300px;
+    /* background-color: rgb(0, 0, 0, 0.3); */
+    align-content: center;
+    border-radius: 20px;
+}
+
+#button-container{
+    /* border: 2px solid black; */
+    width: 500px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#timer, #button-container{
+    position: relative;
+    left: 550px;
+    top: 100px;
+}
+
+.console-buttons{
+    background-color: white;
+    color: black;
+    height: 50px;
+    width: 100px;
+    border-radius: 20px;
+}
+
+.console-buttons:hover{
+    cursor: pointer;
+    background-color:lightgrey
+}
+
+.console-buttons span{
+    position: relative;
+    left: 22px;
+    top: 10px;
+    font-size: 20px;
+    font-family: cursive;
+}
+
+#time{
+    font-size: 80px;
+    font-family: sans-serif;
+    color: white;
+    position: absolute;
+    top: 164px;
+    left: 129px;
+
+}
+
+#settings{
+    height: 50px;
+    width: 50px;
+}
+
+#settings span i{
+    font-size: 40px;
+    color: white;
+    transition:0.2s ease-in-out;
+}
+
+#settings span i:hover{
+    cursor: pointer;
+}
+
+#wallpaper{
+    border-radius: 20px;
+    margin-top: 20px;
+    height: 200px;
+    width: 300px;
+    background-color: black;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+#wallpaper span{
+    color: white;
+    display: block;
+    position: relative;
+    top: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+#wallpaper span:hover{
+    cursor: pointer;
+    color: lightgrey;
+}
+
+#spotify{
+    position: relative;
+    top: 200px;
+}
+
+@media screen and (max-width:900px) {
+    body{
+        background-size:auto;
+    }
+    #timer, #button-container{
+        left: 100px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #timer, #button-container{
+        left: 50px;
+        width: 400px;
+    }
+
+}
