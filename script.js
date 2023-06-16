@@ -1,8 +1,8 @@
-var minutesObj = document.getElementById("minutes");
-var secondsObj = document.getElementById("seconds");
+let minutesObj = document.getElementById("minutes");
+let secondsObj = document.getElementById("seconds");
 
-var minutes = parseInt(minutesObj.innerHTML);
-var seconds = parseInt(secondsObj.innerHTML);
+let minutes = parseInt(minutesObj.innerHTML);
+let seconds = parseInt(secondsObj.innerHTML);
 
 var start = document.getElementById("start");
 var pause = document.getElementById("pause");
@@ -19,8 +19,9 @@ start.addEventListener('click', ()=>{
     if (flag) {
         spn.innerHTML = "pause";
         timerID = setInterval(()=>{
-            minutesObj.innerHTML = minutes;
-            secondsObj.innerHTML = seconds;
+
+            minutesObj.innerHTML = minutes.toString().padStart(2,"0");
+            secondsObj.innerHTML = seconds.toString().padStart(2,"0");
             if(minutes == 0 && seconds == 0){
                 clearInterval(timerID);
                 alert("Timer Ended");
